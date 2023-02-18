@@ -37,14 +37,13 @@ const cars = [
 	},
 ];
 
-function avg(cars){ 
+function averageGrade(cars){ 
     let sum = 0; 
     for (let i = 0; i < cars.length; i++) { 
-        sum += cars[i][price]; 
+       sum += cars[i]['price']; 
     } 
     return sum / cars.length; 
 } 
-
 // Car List
 const carList = document.getElementById('car-list');
 function displayCars(cars) {
@@ -61,12 +60,8 @@ function displayCars(cars) {
 		carList.appendChild(carEl);
 	});
 }
-
+document.write("<h5>Average Price: " + averageGrade(cars) + "</h5>");
 // Initial Display
 displayCars(cars);
-document.write("<h5>Average Price: " + avg(cars) + "</h5>")
-
-
-
 
 
